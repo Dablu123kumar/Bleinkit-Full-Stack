@@ -35,7 +35,7 @@ function App() {
         });
         const { data: responseData } = response;
         if (responseData.success) {
-          dispatch(setAllCategory(responseData.data))
+          dispatch(setAllCategory(responseData.data.sort((a, b) => a.name.localeCompare(b.name))))
           //setCategoryData(responseData.data);
         }
         //console.log(responseData);
@@ -52,7 +52,7 @@ function App() {
         });
         const { data: responseData } = response;
         if (responseData.success) {
-          dispatch(setAllSubCategory(responseData.data))
+          dispatch(setAllSubCategory(responseData.data.sort((a, b) => a.name.localeCompare(b.name))))
         }
         //console.log(responseData);
       } catch (error) {
