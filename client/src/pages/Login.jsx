@@ -29,6 +29,8 @@ const Login = () => {
               }
          })
     }
+    
+    const validValue = Object.values(data).every(el => el)
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
@@ -59,7 +61,6 @@ const Login = () => {
     }
 
 
-    const validValue = Object.values(data).every(el => el)
   return (
     <section className="  container mx-auto w-full px-2 ">
       <div className=" bg-white my-4 w-full max-w-lg mx-auto rounded p-7 ">
